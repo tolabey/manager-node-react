@@ -1,0 +1,21 @@
+button {
+  outline: none;
+  height: 40px;
+  width: 100px;
+  color: #fff;
+  background-color: #000;
+}
+
+button:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+button:active {
+  color: slategray;
+  background-color: #fff;
+}
+
+.home {
+  background-color: lightblue;
+}

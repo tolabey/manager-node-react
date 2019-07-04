@@ -1,0 +1,20 @@
+.tablo {
+  .header {
+    display: flex;
+  }
+
+  .table-content {
+    display: flex;
+    flex-direction: column;
+
+    .one-row {
+      display: flex;
+    }
+  }
+
+  .one-cell {
+    min-width: 100px;
+    padding: 10px;
+  }
+
+}
