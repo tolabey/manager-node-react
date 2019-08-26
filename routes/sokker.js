@@ -42,10 +42,13 @@ module.exports = function(app) {
                         const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
                         const dateTime = date+' '+time;
                         playersData.date = dateTime;
+                        console.log("23")
                         playersData.players = players.players.player.map(each => {
                             each.saveDate = dateTime;
                             return each;
                         });
+
+                        console.log(24)
 
                         const newPlayers = new Players(playersData);
                         newPlayers.save(function (err, data) {

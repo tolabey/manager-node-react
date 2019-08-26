@@ -3,6 +3,7 @@ import I from "immutable";
 import actionCreator from "../../store/actions";
 import { connect } from "react-redux";
 import PlayerCard from "./PlayerCard";
+import './players.scss';
 
 class Players extends React.Component {
 
@@ -27,24 +28,21 @@ class Players extends React.Component {
                     }
                     throw res;
                 }).then(res => {
-                    console.log("playerList fetch", res.data);
                 this.props.setPlayerList(res.data);
             })
         }
     }
 
     dateListRender() {
-        console.log("yaw", this.props.playerList)
         return this.props.playerList.map((each, index) => {
-            console.log("a")
+            console.log("each", each);
             return(
-                <button onClick={this.props.setSelectedDateIndex(index)}>{each.get("date")}</button>
+                <button key={index} onClick={() => this.props.setSelectedDateIndex(index)}>{each.get("date")}</button>
             )
         })
     }
 
     render() {
-        console.log("players", this.props);
         return(
             <div className="players-container">
                 <button

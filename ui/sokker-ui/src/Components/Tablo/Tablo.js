@@ -34,7 +34,6 @@ export default class Tablo extends React.Component {
     }
 
     render() {
-        console.log("tablo.js", this.props);
         return(
             <div className="tablo">
                 <div className="header">

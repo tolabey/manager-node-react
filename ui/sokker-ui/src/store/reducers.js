@@ -12,6 +12,7 @@ export default function reducers(store = I.Map(), action) {
             console.log("playerList reducer", action.payload);
             return store.set("playerList", action.payload);
         case "SET_SELECTED_DATE_INDEX":
+            console.log("action", action)
             return store.set("selectedDateIndex", action.payload);
         default:
             return store;
